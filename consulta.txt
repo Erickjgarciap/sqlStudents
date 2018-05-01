@@ -1,0 +1,4 @@
+SELECT nombre,puntuacion
+from students
+where EXISTS (select grades.grade,grades.min_puntuacion from grades where grade>8) and puntuacion >70
+order by puntuacion DESC.
